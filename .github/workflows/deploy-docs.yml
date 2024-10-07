@@ -21,18 +21,25 @@ jobs:
           # if your docs needs submodules, uncomment the following line
           # submodules: true
 
-      - name: Install bun
-        uses: oven-sh/setup-bun@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         with:
-          bun-version: 1.1.29
-      - name: Install vuepress
-        run: bun install
+          run_install: true
+          version: 8
+
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: pnpm
+
 
       - name: Build Docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
-          bun run docs:build
+          pnpm run docs:build
           > docs/.vuepress/dist/.nojekyll
 
       - name: Deploy Docs
