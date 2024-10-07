@@ -33,7 +33,11 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
-
+      
+      - name: Install Deps
+        run: |
+          corepack enable
+          pnpm install --frozen-lockfile
 
       - name: Build Docs
         env:
@@ -48,3 +52,5 @@ jobs:
           # This is the branch where the docs are deployed to
           branch: gh-pages
           folder: docs/.vuepress/dist
+
+          
