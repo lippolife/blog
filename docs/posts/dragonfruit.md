@@ -2,8 +2,7 @@
 icon: pen-to-square
 date: 2022-01-10
 category:
-  - Dragon Fruit
-  - Fruit
+  - General
 tag:
   - red
   - big

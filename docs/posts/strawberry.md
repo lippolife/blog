@@ -2,8 +2,7 @@
 icon: pen-to-square
 date: 2022-01-11
 category:
-  - Fruit
-  - Strawberry
+  - General
 tag:
   - red
   - small

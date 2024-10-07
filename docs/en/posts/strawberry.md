@@ -1,17 +1,14 @@
 ---
-cover: /assets/images/cover2.jpg
 icon: pen-to-square
-date: 2022-01-12
+date: 2022-01-11
 category:
-  - 蔬菜
+  - General
 tag:
   - 红
-  - 圆
-star: true
-sticky: true
+  - 小
 ---
 
-# 番茄
+# 草莓
 
 ## 标题 2
 

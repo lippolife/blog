@@ -1,20 +1,30 @@
-import { defineUserConfig } from "vuepress";
+import { defineUserConfig } from 'vuepress'
 
-import theme from "./theme.js";
+import theme from './theme.js'
 
 export default defineUserConfig({
-  base: "/",
+  base: '/',
+  head: [
+    [
+      'link',
+      {
+        rel: 'shortcut icon',
+        type: 'image/x-icon',
+        href: 'https://kenalvida.com/images/logo/favicon.ico',
+      },
+    ],
+  ],
 
   locales: {
-    "/": {
-      lang: "en-US",
-      title: "Blog Demo",
-      description: "A blog demo for vuepress-theme-hope",
+    '/': {
+      lang: 'id-ID',
+      description:
+        'Health coverage tailor for you and your family needs. Digital insurance with inpatient, outpatient, dental and maternity benefits. Easy process via apps.',
     },
-    "/zh/": {
-      lang: "zh-CN",
-      title: "博客演示",
-      description: "vuepress-theme-hope 的博客演示",
+    '/en/': {
+      lang: 'en-US',
+      description:
+        'Health coverage tailor for you and your family needs. Digital insurance with inpatient, outpatient, dental and maternity benefits. Easy process via apps.',
     },
   },
 
@@ -22,4 +32,4 @@ export default defineUserConfig({
 
   // Enable it with pwa
   // shouldPrefetch: false,
-});
+})
