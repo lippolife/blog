@@ -25,6 +25,7 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.1.29
+      - name: Install vuepress
         run: bun install
 
       - name: Build Docs
